@@ -266,7 +266,7 @@ class LexerParser {
     }
 
     factorial(n) {
-        if(n>1000000) return null;
+        if(n>=1000) return Infinity;
         let ans = 1;
         for (let i = 1; i <= n; i++) {
             ans *= i;
