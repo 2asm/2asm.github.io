@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Calculator</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="calculator.css" rel="stylesheet">
-        <script src="calculator.js"> </script>
-    </head>
-    <body>
-        <h3>Calculator based on pratt parser</h3>
-        <textarea id="input_area" placeholder="input..."></textarea>
-        <div id="result">output</div>
-        <br></br>
-        <div id="info" style="white-space: pre">
-        Supported Operators:
-            Prefix Operators: <b>+, -, ~(bitwise not)</b>
-            Postfix Operators: <b>!(factorial)</b>
-            Infix Operators: <b>+, -, *, /, %, <<, >>, &, |, ^, **(power)</b>
-        Builtin functions: <b>sin, cos, tan, log, abs, deg(degree to radian)</b>
-        Builtin constants: <b>PI</b>, <b>E</b>
-        Number format: <b>A(.B)?</b> (eg. 3.3, 0.1, 3242)
-        </div>
-        <script>
-            let input = document.getElementById("input_area");
-            let res = document.getElementById("result");
-            input.oninput = () => {
-                let ans = parse(input.value);
-                res.innerText = ans ?? "Error";
-            }
-        </script>
-    </body>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="calculator.css" rel="stylesheet">
+    <script src="calculator.js"> </script>
+</head>
+
+<body>
+    <h3>Calculator based on pratt parser</h3>
+    <textarea id="input_area" placeholder="input..."></textarea>
+    <div id="result">output</div>
+    <br></br>
+    <div id="info" style="white-space: pre">
+    Supported Operators:
+    Prefix Operators: <b>+, -, ~(bitwise not)</b>
+    Postfix Operators: <b>!(factorial)</b>
+    Infix Operators: <b>+, -, *, /, %, <<,>>, &, |, ^, **(power)</b>
+    Builtin functions: <b>sin, cos, tan, log, abs, deg(degree to radian)</b>
+    Builtin constants: <b>PI</b>, <b>E</b>
+    Number format: <b>A(.B)?</b> (eg. 3.3, 0.1, 3242)
+    </div>
+    <script>
+        let input = document.getElementById("input_area");
+        let res = document.getElementById("result");
+        input.oninput = () => {
+            let ans = parse(input.value);
+            res.innerText = ans ?? "Error";
+        }
+    </script>
+</body>
+
 </html>
