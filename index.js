@@ -1,3 +1,5 @@
-let c = document.getElementById("d1")
-c.innerText = "hello world"
-c.setAttribute("align", "center")
+let c = document.getElementById("d1");
+c.setAttribute("align", "center");
+setTimeout(() => {
+    c.innerText = "Hello";
+}, 2000);
