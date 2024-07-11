@@ -1,3 +1,9 @@
 [submodule "snake_game"]
 	path = snake_game
 	url = https://github.com/2asm/snake_game.git
+[submodule "tic_tac_toe"]
+	path = tic_tac_toe
+	url = https://github.com/2asm/tic_tac_toe.git
+[submodule "daily_sudoku"]
+	path = daily_sudoku
+	url = https://github.com/2asm/daily_sudoku.git
