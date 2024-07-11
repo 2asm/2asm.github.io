@@ -86,7 +86,7 @@ class LexerParser {
         if (this.curChar() == '.' && this.isDigit(this.nextChar())) {
             this.pos += 1;
             let right = this.readNumber();
-            return new Token(TokenType.Num, Number(left+"."+right));
+            return new Token(TokenType.Num, Number(left + "." + right));
         }
         return new Token(TokenType.Num, Number(left));
     }
@@ -200,7 +200,7 @@ class LexerParser {
             case TokenType.Plus:
             case TokenType.Minus:
             case TokenType.Tilda:
-                return [0,95];
+                return [0, 95];
             default:
                 return [0, 0];
         }
@@ -209,40 +209,40 @@ class LexerParser {
     postfixBindingPower(t) {
         switch (t.type) {
             case TokenType.LParen:
-                return [99,0];
+                return [99, 0];
             case TokenType.Fact:
-                return [97,0];
+                return [97, 0];
             default:
-                return [0,0];
+                return [0, 0];
         }
     }
 
     infixBindingPower(t) {
         switch (t.type) {
             case TokenType.Exp:
-                return [93,92];
+                return [93, 92];
             case TokenType.Mult:
             case TokenType.Mod:
             case TokenType.Div:
-                return [90,91];
+                return [90, 91];
             case TokenType.Plus:
             case TokenType.Minus:
-                return [88,89];
+                return [88, 89];
             case TokenType.LShift:
             case TokenType.RShift:
-                return [86,87];
+                return [86, 87];
             case TokenType.And:
-                return [84,85];
+                return [84, 85];
             case TokenType.Xor:
-                return [82,83];
+                return [82, 83];
             case TokenType.Or:
-                return [80,81];
+                return [80, 81];
             default:
-                return [0,0];
+                return [0, 0];
         }
     }
 
-    isInt(n){
+    isInt(n) {
         return Number(n) === n && n % 1 === 0;
     }
 
@@ -266,7 +266,7 @@ class LexerParser {
     }
 
     factorial(n) {
-        if(n>=1000) return Infinity;
+        if (n >= 1000) return Infinity;
         let ans = 1;
         for (let i = 1; i <= n; i++) {
             ans *= i;
@@ -304,7 +304,7 @@ class LexerParser {
                     case TokenType.Log:
                         return new Token(TokenType.Num, Math.log(rhs.value));
                     case TokenType.Deg:
-                        return new Token(TokenType.Num, rhs.value * Math.PI/ 180);
+                        return new Token(TokenType.Num, rhs.value * Math.PI / 180);
                     default:
                         return new Token(TokenType.Error, 0);
                 }
