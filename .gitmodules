@@ -7,3 +7,6 @@
 [submodule "daily_sudoku"]
 	path = daily_sudoku
 	url = https://github.com/2asm/daily_sudoku.git
+[submodule "maze_game"]
+	path = maze_game
+	url = https://github.com/2asm/maze_game.git
