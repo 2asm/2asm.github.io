@@ -10,3 +10,6 @@
 [submodule "maze_game"]
 	path = maze_game
 	url = https://github.com/2asm/maze_game.git
+[submodule "space_invaders"]
+	path = space_invaders
+	url = https://github.com/2asm/space_invaders.git
